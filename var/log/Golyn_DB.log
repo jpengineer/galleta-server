@@ -1,0 +1,159 @@
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Nov 17, 2023 17:41:10.328120 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Nov 17, 2023 17:41:10.328154 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Nov 17, 2023 17:41:10.347376 -03 [INFO] Open Connection Database
+Nov 17, 2023 17:41:10.347393 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Nov 17, 2023 17:43:48.375836 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Nov 17, 2023 17:43:48.446218 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1 | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Nov 17, 2023 17:43:48.448277 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Nov 17, 2023 17:43:48.450615 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Nov 17, 2023 17:43:48.452186 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:43:28.876151 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:43:28.876183 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:43:28.890994 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:43:28.891002 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 19:43:42.424048 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 19:43:42.487722 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 19:43:42.489558 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 19:43:42.490872 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 19:43:42.491685 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:44:06.528644 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:44:06.528652 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:44:06.545518 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:44:06.545530 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 19:44:12.357318 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 19:44:12.434587 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:47:30.695245 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:47:30.695308 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:47:30.709287 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:47:30.709296 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:49:21.682834 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:49:21.682874 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:49:21.696717 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:49:21.696725 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:50:01.034977 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:50:01.034988 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:50:01.046957 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:50:01.046970 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:51:38.987585 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:51:38.987622 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:51:39.000863 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:51:39.000870 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 19:52:09.810137 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 19:52:09.810184 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 19:52:09.825764 -03 [INFO] Open Connection Database
+Dec 5, 2023 19:52:09.825772 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:03:13.403896 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:03:13.403923 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:03:13.416206 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:03:13.416214 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:10:09.607951 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:10:09.607978 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:10:09.621921 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:10:09.621934 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:10:39.521359 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:10:39.521377 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:10:39.541070 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:10:39.541083 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:12:54.752425 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:12:54.752471 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:12:54.767907 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:12:54.767917 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:13:54.959895 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:13:54.959924 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:13:54.974105 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:13:54.974118 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:18:37.251907 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:18:37.251916 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:18:37.265697 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:18:37.265706 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 20:18:43.534956 -03 [DEBUG] query: SELECT pl.first_name, pl.last_name, pl.age, con.country_code, con.country_name, pc.avatar_card, pc.type_card, pc.positions FROM galleta_app.players as pl INNER JOIN galleta_app.countries as con ON country_name = country INNER JOIN galleta_app.player_configurations as pc ON pl.id = pc.player_id WHERE pl.id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 20:18:43.538322 -03 [ERROR] An error has occurred in the database. Try again later: 'result' must be a pointer to a struct slice
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:19:12.748510 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:19:12.748534 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:19:12.760268 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:19:12.760276 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 20:19:17.559341 -03 [DEBUG] query: SELECT pl.first_name, pl.last_name, pl.age, con.country_code, con.country_name, pc.avatar_card, pc.type_card, pc.positions FROM galleta_app.players as pl INNER JOIN galleta_app.countries as con ON country_name = country INNER JOIN galleta_app.player_configurations as pc ON pl.id = pc.player_id WHERE pl.id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 20:19:17.562734 -03 [ERROR] An error has occurred in the database. Try again later: can't scan into dest[7]: cannot scan _varchar (OID 1015) in binary format into *string
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:20:04.723471 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:20:04.723487 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:20:04.735422 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:20:04.735430 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 20:20:09.012950 -03 [DEBUG] query: SELECT pl.first_name, pl.last_name, pl.age, con.country_code, con.country_name, pc.avatar_card, pc.type_card, pc.positions FROM galleta_app.players as pl INNER JOIN galleta_app.countries as con ON country_name = country INNER JOIN galleta_app.player_configurations as pc ON pl.id = pc.player_id WHERE pl.id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:35:37.340639 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:35:37.340662 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:35:37.353466 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:35:37.353477 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 20:35:45.785045 -03 [DEBUG] query: SELECT pl.first_name, pl.last_name, pl.age, con.country_code, con.country_name, pc.avatar_card, pc.type_card, pc.positions FROM galleta_app.players as pl INNER JOIN galleta_app.countries as con ON country_name = country INNER JOIN galleta_app.player_configurations as pc ON pl.id = pc.player_id WHERE pl.id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Dec 5, 2023 20:36:04.145952 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Dec 5, 2023 20:36:04.145980 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Dec 5, 2023 20:36:04.159632 -03 [INFO] Open Connection Database
+Dec 5, 2023 20:36:04.159640 -03 [INFO] PostgreSQL 15.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Dec 5, 2023 20:36:18.365163 -03 [DEBUG] query: SELECT pl.first_name, pl.last_name, pl.age, con.country_code, con.country_name, pc.avatar_card, pc.type_card, pc.positions FROM galleta_app.players as pl INNER JOIN galleta_app.countries as con ON country_name = country INNER JOIN galleta_app.player_configurations as pc ON pl.id = pc.player_id WHERE pl.id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:07.573724 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 22:52:07.673019 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:07.676348 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:07.678701 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:07.679866 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:17.594592 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 22:52:17.676165 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:17.677613 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:17.678495 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:17.679125 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:49.491265 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 22:52:49.575887 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:49.577610 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:49.579405 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:52:49.580979 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:56:21.674678 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 22:56:21.754828 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:56:21.755746 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:56:21.757615 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:56:21.758295 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:57:27.936925 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 22:57:28.011173 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:57:28.012282 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:57:28.014304 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 22:57:28.014944 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 23:00:50.697539 -03 [DEBUG] query: SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1) | args: juan@gmail.com
+Dec 5, 2023 23:00:50.772681 -03 [DEBUG] query: SELECT team.id, team_m.user_id, team.name, team.captain, team.created_by, team.city, team.country, team_m.is_captain, team_m.is_main_team, team.team_status, team.last_update, team.created FROM galleta_app.teams as team INNER JOIN galleta_app.team_members team_m on team_m.team_id = team.id WHERE team_m.user_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 23:00:50.773890 -03 [DEBUG] query: SELECT tm.team_id, tm.user_id, pl.first_name, pl.last_name, pl.alias, pl.player_status, pl.galleta_status, pc.avatar, pc.avatar_card, pc.positions FROM galleta_app.team_members as tm INNER JOIN galleta_app.players pl on pl.id = tm.user_id INNER JOIN galleta_app.player_configurations as pc on pc.player_id = pl.id WHERE tm.team_id = $1 AND tm.user_id <> $2; | args: 227912a5-0e43-40b8-826a-c56f52ec0156, 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 23:00:50.775718 -03 [DEBUG] query: SELECT avatar, avatar_card, type_card, positions FROM galleta_app.player_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Dec 5, 2023 23:00:50.776391 -03 [DEBUG] query: SELECT color_background_menu, color_background_menu_active, color_text_menu, color_background_light, color_background_dark, color_shadow_light, color_shadow_dark, sidebar_slide_left, sidebar_slide_right, slide_menu_effect FROM galleta_app.system_configurations WHERE player_id = $1; | args: 7bbee5be-0513-42da-a254-c3efda2822af
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Jan 11, 2024 19:10:25.826393 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Jan 11, 2024 19:10:25.826403 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Jan 11, 2024 19:10:25.840618 -03 [INFO] Open Connection Database
+Jan 11, 2024 19:10:25.840630 -03 [INFO] PostgreSQL 15.5 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Jan 11, 2024 19:18:44.027936 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Jan 11, 2024 19:18:44.027965 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Jan 11, 2024 19:18:44.039630 -03 [INFO] Open Connection Database
+Jan 11, 2024 19:18:44.039650 -03 [INFO] PostgreSQL 15.5 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Jan 11, 2024 19:19:50.609533 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Jan 11, 2024 19:19:50.609546 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Jan 11, 2024 19:19:50.629405 -03 [INFO] Open Connection Database
+Jan 11, 2024 19:19:50.629419 -03 [INFO] PostgreSQL 15.5 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+Logger Version: 1.6.1 SourceFile: setting_log_file.go Hash: MGm0DhOI23c750EOQGnT2AdPp+8E5VHwB0pnlcbcZ6s=
+Jan 11, 2024 19:24:54.443688 -03 [INFO] DB user: juan | DB name: galleta_app_db | DB schema: galleta_app | DB host: localhost | DB port: 5432
+Jan 11, 2024 19:24:54.443697 -03 [DEBUG] Postgres connection string: user=juan password=Nomeacuerdo host=localhost port=5432 dbname=galleta_app_db sslmode=disable search_path=galleta_app
+Jan 11, 2024 19:24:54.454953 -03 [INFO] Open Connection Database
+Jan 11, 2024 19:24:54.454965 -03 [INFO] PostgreSQL 15.5 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit

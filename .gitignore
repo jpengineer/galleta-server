@@ -19,3 +19,14 @@
 
 # Go workspace file
 go.work
+
+/pkg/info.txt
+/modules/info.txt
+/internal/info.txt
+/cmd/info.txt
+/certificates/certificate.pem
+/certificates/private_key.pem
+/certificates/public_key.pem
+/builds/Golyn_v0.1.0_linux.tar.gz
+/builds/Golyn_v0.1.0/
+
