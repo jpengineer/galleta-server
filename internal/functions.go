@@ -18,51 +18,6 @@ import (
 	"time"
 )
 
-/*func GetCodeMessage(code int) string {
-	switch code {
-	case 100:
-		return "[Continue] Server received the requested and the client can continue sending the rest of the request."
-	case 101:
-		return "[Switching Protocol] The server accept to change the requested protocol."
-	case 200:
-		return "[OK] The request has been completed successfully."
-	case 201:
-		return "[Created] The request resulted in the creation of a new resource."
-	case 202:
-		return "[Accepted] The request has been accepted to processing, but hasn't been completed yet"
-	case 204:
-		return "[No Content] The request has been completed successfully, but there isn't body respond (e.g.: DELETE request)"
-	case 300:
-		return "[Multiple Choices] The request indicates multiple options available."
-	case 301:
-		return "[Moved Permanently] The resource requested has been moved to other location permanently."
-	case 302:
-		return "[Found (or 303 See Other)] The resource requested is found temporarily in a different location."
-	case 304:
-		return "[Not Modified] Indicates that the resource hasn't been modified and can use the cache version."
-	case 400:
-		return "[Bad Request] The client request is incorrect or it can't be understood."
-	case 401:
-		return "[Unauthorized] The client doesn't have the necessary authorization to access to the resource."
-	case 403:
-		return "[Forbidden] The server understood the request but refuses to authorize it."
-	case 404:
-		return "[Not Found] The requested resource is not found in the server."
-	case 405:
-		return "[Method Not Allowed] The requested HTTP method it doesn't allow for this route."
-	case 500:
-		return "[Internal Server Error] Indicates an internal error in the server."
-	case 501:
-		return "[Not Implemented] The server can't achieve the request because it doesn't recognize the action."
-	case 502:
-		return "[Bad Gateway] The server, as long as acted like a gateway or proxy, received an invalid respond from the upstream server."
-	case 503:
-		return "[Service Unavailable] The server is not ready to handle the request. May be due to overload or maintenance."
-	default:
-		return "Code not found :( "
-	}
-}*/
-
 const (
 	Continue            = 100
 	SwitchingProtocols  = 101

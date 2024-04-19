@@ -25,14 +25,12 @@ import (
 // Documentation: https://gin-gonic.com/docs/quickstart/
 
 const (
-	version string = "v0.1.0"
-	GET     string = "GET"
-	POST    string = "POST"
-	PUT     string = "PUT"
-	DELETE  string = "DELETE"
-	OPTIONS string = "OPTIONS"
-	//certificate string = "./certificates/server_secret.pem"
-	//key         string = "./certificates/server_key.pem"
+	version     string = "v0.1.0"
+	GET         string = "GET"
+	POST        string = "POST"
+	PUT         string = "PUT"
+	DELETE      string = "DELETE"
+	OPTIONS     string = "OPTIONS"
 	certificate string = "./certificates/certificate.pem"
 	key         string = "./certificates/private_key.pem"
 )
@@ -114,16 +112,6 @@ func main() {
 		gin.SetMode(gin.ReleaseMode)
 	}
 
-	/* 	CONFIG GIN FRAMEWORK CORS: CORS only applies for HTTP web requests, for this case the originator is an app, therefore it does not need CORS. */
-	//configCors := cors.DefaultConfig()
-	//configCors.AllowOrigins = []string{"http://localhost:8443"}
-	//configCors.AllowMethods = []string{GET, POST, PUT, DELETE}
-	//configCors.AllowHeaders = []string{"Origin"}
-
-	// APPLY GIN CORS CONFIG
-	//router.Use(cors.New(configCors))
-
-	// TODO INVESTIGANDO...
 	serverPort := strconv.Itoa(config.Server.Port)
 	router.Use(secure.New(secure.Config{
 		AllowedHosts: []string{
@@ -235,16 +223,6 @@ func generateTLSConfig() *tls.Config {
 		Certificates: []tls.Certificate{cert},
 	}
 }
-
-// generateRandomKey() NO IMPLEMENTED YET
-//func generateRandomKey() (string, error) {
-//	key := make([]byte, 32) // Key 32 bytes
-//	_, err := rand.Read(key)
-//	if err != nil {
-//		return "", err
-//	}
-//	return base64.StdEncoding.EncodeToString(key), errors.New("error de prueba")
-//}
 
 func dbMiddleware(db *modules.DBInstance, log *logger.Log) gin.HandlerFunc {
 	return func(c *gin.Context) {

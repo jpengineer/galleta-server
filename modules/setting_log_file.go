@@ -5,8 +5,6 @@ import (
 	"strings"
 )
 
-//var LogDB *logger.Log
-
 func InitLogDB(name string, path string, level string, maxSizeMb int, maxBackup int) *logger.Log {
 	LogDB, _ := logger.Start(name+"_DB.log", path, strings.ToUpper(level))
 	LogDB.TimestampFormat(logger.TS.Special)

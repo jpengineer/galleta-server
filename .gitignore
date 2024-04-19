@@ -29,4 +29,4 @@ go.work
 /certificates/public_key.pem
 /builds/Golyn_v0.1.0_linux.tar.gz
 /builds/Golyn_v0.1.0/
-
+.idea

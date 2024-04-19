@@ -42,12 +42,6 @@ type Config struct {
 func LoadConfig() (Config, error) {
 	var conf Config
 
-	//dir, err := os.Getwd()
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-	//fmt.Println(dir)
-
 	cfg, err := ini.Load("./config/galleta_app.conf")
 	if err != nil {
 		return Config{}, errors.New(fmt.Sprintf("Error loading configuration: %v\n", err))

@@ -4,7 +4,6 @@ import (
 	"time"
 )
 
-// Query QueryMap es un mapa que contiene consultas SQL con nombres.
 var Query = map[string]string{
 	"login":                      `SELECT id, first_name, last_name, alias, age, email, password, city, country, country_code, player_status, galleta_status, developer, last_update, created FROM galleta_app.players INNER JOIN galleta_app.countries ON country_name = country WHERE lower(email) = lower($1)`,
 	"get_countries":              "SELECT country_code, country_name FROM galleta_app.countries;",
